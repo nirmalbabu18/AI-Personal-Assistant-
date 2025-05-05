@@ -9,7 +9,7 @@
 #define OLED_RESET -1
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
-// Replace with your WiFi credentials
+// WiFi credentials
 const char* ssid = "ASTOR";
 const char* password = "astor018";
 
@@ -17,8 +17,7 @@ const char* password = "astor018";
 const char* apiKey = "qYkx5m37S1bTLzQxtW0Xal4UNQU7VokBz5pgsw9L";
 
 // LED pin
-const int ledPin = 4;  // GPIO4 (D2 if labeled that way)
-
+const int ledPin = 4;  // GPIO4 
 void setup() {
   pinMode(ledPin, OUTPUT);
   digitalWrite(ledPin, LOW);
@@ -118,7 +117,7 @@ void loop() {
           display.println(aiResponse);
           display.display();
 
-          // ✨ LED CONTROL LOGIC
+          //  LED CONTROL LOGIC
           String reply = String(aiResponse);
           reply.toLowerCase();
 
